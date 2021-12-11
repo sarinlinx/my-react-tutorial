@@ -1,0 +1,304 @@
+/* CSS variables. Place these in :root pseudo element 
+You can then use them using the var() property as shown below */
+
+ :root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+    --line: 1px solid var(--color-grey-light-2)
+}
+
+
+/* General Sass media query sizes */
+
+
+/* 
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px */
+
+
+/* universal selector, selects all elements on page */
+
+* {
+    /* removes margins and padding from all elements 
+                    like headers and paragraphs*/
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    /* changes box model so borders and padding are not added to 
+                    total width or heigh specified for that box*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* make it easier to use rems 
+    1rem = 10px, 10px/16px = 62.5%*/
+    /* font-size: 62.5%; */
+}
+
+body {
+    padding: 1rem 10rem;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    line-height: 2;
+    background-color: #1f2833;
+    color: #c5c6c7;
+    /* gradient, comma, then image */
+    background-image: linear-gradient(to right bottom, rgba(64, 64, 64, 0.9), rgba(0, 0, 0, 0.9)), url(../_img/code-storm-bg.jpg);
+    /* takes up full width of viewport */
+    background-size: cover;
+    /* top of image will always stay at top of screen when resizing */
+    background-position: top;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/* 
+@media only screen and (max-width: 1800px) {
+    body {
+        padding: 1rem 18rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    body {
+        padding: 1rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding: 1rem 3rem;
+    }
+} */
+
+.homepage-title-container {
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, transparent 15%, rgba(111, 111, 111, .4) 50%, transparent 85%);
+}
+
+.homepage-title {
+    margin-top: 3rem;
+    font-size: 5.5rem;
+    font-family: 'Cormorant SC', cursive;
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+    display: inline;
+    background-image: linear-gradient(to top, #5e6060, #61dafb);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.flex-container {
+    display: flex;
+    border: 1px solid white;
+}
+
+
+/*___________________________________________________
+Headers
+___________________________________________________*/
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #776a6a;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #e3c9ac 0%, #f68308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #776a6a;
+    font-size: 2.5rem;
+    background: linear-gradient(to bottom, #84e1fd 0%, #0a8ff0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    margin-top: 3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, #9ebe9a 0%, #01c633 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    margin-top: 3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 1.7rem;
+    background: linear-gradient(to bottom, #a4a4a4 0%, #ff0909 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h5 {
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 1.4rem;
+    background: linear-gradient(to bottom, #f3c57f 0%, #6f4e10 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*___________________________________________________
+NAVBAR
+___________________________________________________*/
+
+
+/*______________________________________________
+NAVIGATION
+_______________________________________________*/
+
+.navbar {
+    display: block;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding-left: 25rem;
+}
+
+.navbar a {
+    float: left;
+    /* display: block; */
+    color: #f2f2f2;
+    /* text-align: center; */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /* transition: color 2s; */
+    background: #000;
+}
+
+.navbar a:hover {
+    color: rgb(111, 150, 255);
+}
+
+
+/*___________________________________________________
+Code Examples
+___________________________________________________*/
+
+
+/* Main container for side by side text and code examples */
+
+.example {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+.code-css {
+    color: #ffe500;
+}
+
+.code-js {
+    color: #ff6f6f;
+}
+
+.code-react {
+    color: #61dafb;
+}
+
+.code-comment {
+    color: gray;
+}
+
+.code-output {
+    color: #9c9c9c;
+}
+
+
+/*________________________
+CUSTOM GRID
+_________________________*/
+
+.row {
+    /* 1140px / 10 = 114 rem */
+    max-width: 114rem;
+    /* background-color: #eee; */
+    /* center block element inside another block element */
+    margin: 0 auto;
+    /* remove margin from last row using not pseudo class */
+    /*  The not pseudo class selects everything except the last child */
+    border: 1px solid red;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    /* background-color: orangered; */
+    float: left;
+    /*since gutter is only applied to the right of an element the
+      you must remove the gutter from the element all the way on the right */
+}
+
+.row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-3 {
+    width: calc((2 * (100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-2-of-4 {
+    width: calc((2 * (100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+    width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
