@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    padding: 1rem 10rem;
+    padding: 1rem 4rem;
     font-family: 'Lora', serif;
     font-weight: 400;
     line-height: 2;
@@ -101,7 +101,7 @@ body {
 .homepage-title {
     margin-top: 3rem;
     font-size: 5.5rem;
-    font-family: 'Cormorant SC', cursive;
+    /* font-family: 'Cormorant SC', cursive; */
     padding-bottom: 1rem;
     letter-spacing: 2px;
     display: inline;
@@ -116,14 +116,14 @@ body {
 }
 
 
+
 /*___________________________________________________
 Headers
 ___________________________________________________*/
 
 h1 {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 20px;
-    padding-bottom: 15px;
     border-bottom: 2px solid #776a6a;
     font-size: 3rem;
     background: linear-gradient(to bottom, #e3c9ac 0%, #f68308 100%);
@@ -143,10 +143,8 @@ h2 {
 }
 
 h3 {
-    margin-top: 3rem;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    font-size: 2rem;
+    margin-top: 1rem;    
+    font-size: 1.5rem;
     background: linear-gradient(to bottom, #9ebe9a 0%, #01c633 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -173,14 +171,30 @@ h5 {
 }
 
 
+
 /*___________________________________________________
-NAVBAR
+Links
 ___________________________________________________*/
+a:link {
+  color: #FFBF00;
+}
+
+a:hover {
+  color:#f45b00;
+}
+
+a:active {
+  color:#0071ff;
+}
+
+a:visited {
+  color:#cf61fc;
+}
 
 
-/*______________________________________________
-NAVIGATION
-_______________________________________________*/
+/*___________________________________________________
+NavBar
+___________________________________________________*/
 
 .navbar {
     display: block;
@@ -208,6 +222,16 @@ _______________________________________________*/
 .navbar a:hover {
     color: rgb(111, 150, 255);
 }
+
+
+/*___________________________________________________
+Lists
+___________________________________________________*/
+ul {
+  margin-top: .5rem;
+  margin-left: 2rem;
+}
+
 
 
 /*___________________________________________________
@@ -247,15 +271,19 @@ ___________________________________________________*/
 CUSTOM GRID
 _________________________*/
 
+.row-example {
+  background-color: rgba(25,25,25,.5);
+  color: #b0cad4;
+}
 .row {
+  padding: 1rem  1rem 1rem;
     /* 1140px / 10 = 114 rem */
-    max-width: 114rem;
-    /* background-color: #eee; */
+    /* max-width: 114rem;      */
     /* center block element inside another block element */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* remove margin from last row using not pseudo class */
     /*  The not pseudo class selects everything except the last child */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .row:not(:last-child) {
