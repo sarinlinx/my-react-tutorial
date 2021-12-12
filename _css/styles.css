@@ -110,12 +110,6 @@ body {
     color: transparent;
 }
 
-.flex-container {
-    display: flex;
-    border: 1px solid white;
-}
-
-
 
 /*___________________________________________________
 Headers
@@ -126,24 +120,22 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 2px solid #776a6a;
     font-size: 3rem;
-    background: linear-gradient(to bottom, #e3c9ac 0%, #f68308 100%);
+    background: linear-gradient(to bottom, #959595 0%, #ff8604 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h2 {
-    margin-top: 4rem;
     margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #776a6a;
+    /* border-bottom: 2px solid #776a6a; */
     font-size: 2.5rem;
-    background: linear-gradient(to bottom, #84e1fd 0%, #0a8ff0 100%);
+    background: linear-gradient(to bottom, #daf6ff 0%, #0074c9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h3 {
-    margin-top: 1rem;    
+    margin-top: 1rem;
     font-size: 1.5rem;
     background: linear-gradient(to bottom, #9ebe9a 0%, #01c633 100%);
     -webkit-background-clip: text;
@@ -151,10 +143,8 @@ h3 {
 }
 
 h4 {
-    margin-top: 3rem;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    font-size: 1.7rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
     background: linear-gradient(to bottom, #a4a4a4 0%, #ff0909 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -162,33 +152,31 @@ h4 {
 
 h5 {
     margin-top: 2rem;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background: linear-gradient(to bottom, #f3c57f 0%, #6f4e10 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-
 /*___________________________________________________
 Links
 ___________________________________________________*/
+
 a:link {
-  color: #FFBF00;
+    color: #FFBF00;
 }
 
 a:hover {
-  color:#f45b00;
+    color: #f45b00;
 }
 
 a:active {
-  color:#0071ff;
+    color: #0071ff;
 }
 
 a:visited {
-  color:#cf61fc;
+    color: #cf61fc;
 }
 
 
@@ -197,14 +185,14 @@ NavBar
 ___________________________________________________*/
 
 .navbar {
-    display: block;
-    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    background-color: rgba(0, 0, 0, 1);
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
-    padding-left: 25rem;
+    padding-left: 4rem;
 }
 
 .navbar a {
@@ -216,34 +204,73 @@ ___________________________________________________*/
     text-decoration: none;
     font-size: 17px;
     /* transition: color 2s; */
-    background: #000;
 }
 
 .navbar a:hover {
     color: rgb(111, 150, 255);
 }
 
+.nav-page::before {
+    content: ">";
+    margin-right: .5rem;
+    margin-left: -1rem;
+}
+
+.navbar .nav-active {
+    color: rgb(224, 151, 56);
+}
+
 
 /*___________________________________________________
 Lists
 ___________________________________________________*/
+
 ul {
-  margin-top: .5rem;
-  margin-left: 2rem;
+    /* margin: .5rem 0 1rem 2rem; */
 }
 
+
+/*___________________________________________________
+Code Section
+___________________________________________________*/
+
+.text-section {
+    padding: 1rem;
+    background-color: rgba(25, 25, 25, .5);
+    color: #b0cad4;
+}
+
+.code-section-container {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: rgba(25, 25, 25, .5);
+    color: #b0cad4;
+    /* border: 1px solid red; */
+    justify-content: space-between
+}
+
+.code-text-section {}
+
+.code-block-section-w60 {
+    min-width: 500px;
+    /* flex-shrink: 0; */
+    flex-basis: 60%;
+}
+
+.example {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
 
 
 /*___________________________________________________
 Code Examples
 ___________________________________________________*/
 
-
-/* Main container for side by side text and code examples */
-
-.example {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
+.code-html {
+    color: #fcb46c;
+    ;
 }
 
 .code-css {
@@ -266,67 +293,21 @@ ___________________________________________________*/
     color: #9c9c9c;
 }
 
-
-/*________________________
-CUSTOM GRID
-_________________________*/
-
-.row-example {
-  background-color: rgba(25,25,25,.5);
-  color: #b0cad4;
-}
-.row {
-  padding: 1rem  1rem 1rem;
-    /* 1140px / 10 = 114 rem */
-    /* max-width: 114rem;      */
-    /* center block element inside another block element */
-    /* margin: 0 auto; */
-    /* remove margin from last row using not pseudo class */
-    /*  The not pseudo class selects everything except the last child */
-    /* border: 1px solid red; */
+.code-highlight {
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
-.row:not(:last-child) {
-    margin-bottom: 8rem;
+.code-keyboard {
+    color: #c2c0c0;
 }
 
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row [class^="col-"] {
-    /* background-color: orangered; */
-    float: left;
-    /*since gutter is only applied to the right of an element the
-      you must remove the gutter from the element all the way on the right */
-}
-
-.row [class^="col-"]:not(:last-child) {
-    margin-right: 6rem;
-}
-
-.row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2);
-}
-
-.row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3);
-}
-
-.row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4);
-}
-
-.row .col-2-of-3 {
-    width: calc((2 * (100% - 2 * 6rem) / 3) + 6rem);
-}
-
-.row .col-2-of-4 {
-    width: calc((2 * (100% - 3 * 6rem) / 4) + 6rem);
-}
-
-.row .col-3-of-4 {
-    width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem);
+.code {
+    font-family: monospace, sans-serif;
+    font-weight: 400;
+    color: #b2cdff;
+    background-color: #000;
+    border: 1px solid #b2cdff;
+    border-radius: 2px;
+    padding: 1px 4px;
 }
