@@ -45,11 +45,33 @@
             <li>2: They handle user events, such as the user typing into a text input or clicking on a button.</li>
         </ul>
 
+        <p>Components come in two types</p>
+        <ul>
+            <li>Class components</li>
+            <li>Function components</li>
+        </ul>
+        <div class="notebox-note">
+            <p>In older React code bases, you may find Class components primarily used. It is now suggested to use Function components along with Hooks, which were added in React 16.8. There is an optional section on Class components for your reference.</p>
+        </div>
+
         <img src="../../_img/component.png" width="450px">
 
         <h3>3 tenets of components</h3>
         <img src="../../_img/components-3-tenents.png" width="450px">
     </div>
+
+
+
+    <h2>Naming Components</h2>
+
+    <div class="text-section">
+        <p>A component's name MUST start with an upper case letter.</p>
+    </div>
+
+
+
+
+
 
 
 
@@ -90,8 +112,39 @@
         <p>It takes JSX and turns it into HTML and puts it into the DOM to display.</p>
         <p>Because ReactDOM is responsible for rendering content or showing content to a user, we refer to it as a 'renderer'.
         </p>
-
     </div>
+
+
+
+
+
+
+
+
+
+
+    <h1>The render() function</h1>
+    <section class="code-section-container">
+        <div class="code-text-section">
+            <p>The purpose of the function is to display the specified HTML code inside the specified HTML element.</p>
+            <p>render() takes two arguments</p>
+            <ul>
+                <li>HTML code (component)</li>
+                <li>HTML element - (located in the /public/index.html file)</li>
+            </ul>
+            <p>This example uses a Component named App().</p>
+            <div class="notebox-note">
+                <p>The HTML element id is usually named 'root' by convention, but it does not have to be called "root".</p>
+            </div>
+        </div>
+        <div class="code-block-section-w60 ">
+            <pre class="example"><span class="code-react">ReactDOM.render(&lt;App /&gt;, document.querySelector("#root"));</span></pre>
+        </div>
+    </section>
+
+
+
+
 
 
 

@@ -26,28 +26,53 @@
 
 
 
-    <h2>.........</h2>
+    <h1>Props</h1>
     <div class="code-text-section">
-        <p>........</p>
+        <p>Props stands for properties.</p>
+        <p>Props are arguments passed into React components.</p>
+        <p>Components can be passed as props.</p>
+        <p>Props are like function arguments, and you send them into the component as HTML attributes.</p>
     </div>
 
 
 
-    <h2>.............</h2>
+    <h2>Components in Files</h2>
     <section class="code-section-container">
         <div class="code-text-section">
-            <p>............</p>
+            <p>It is recommended to split your components into separate files.</p>
+            <p>To do that, create a new file with a .js file extension and put the code inside it.</p>
+            <div class="notebox-note">
+                <p>The filename must start with an uppercase character.</p>
+
+            </div>
+            <p>This example creates a Component named Car.js.</p>
+
         </div>
 
         <div class="code-block-section-w60 ">
-            <pre class="example"><span class="code-react">.........</span></pre>
+            <pre class="example"><span class="code-react">function Car() {
+return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
+}
+
+export default Car;</span></pre>
+        </div>
+    </section>
+
+    <section class="code-section-container">
+        <div class="code-text-section">
+            <p>You can then import it into our application.</p>
+
+        </div>
+
+        <div class="code-block-section-w60 ">
+            <pre class="example"><span class="code-react">import Car from './Car.js';</span></pre>
         </div>
     </section>
 
 
 
-    
- 
+
+
 
 
 
