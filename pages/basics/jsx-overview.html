@@ -289,6 +289,76 @@ const App = () =&gt; {
 
 
 
+    
+
+    <h1>Adding images using faker.js</h1>
+    <section class="code-section-container">
+        <div class="code-text-section">
+            <p>This uses <a href="https://github.com/marak/Faker.js/">faker.js</a> to generate a fake image.</p>
+            <p>Stop your app.</p>
+            <p>Install the faker library into your local project.</p>
+        </div>
+
+        <div class="code-block-section-w60 ">
+            <pre class="example"><span class="code-react">npm install --save faker</span></pre>
+        </div>
+    </section>
+
+
+
+<h2>Import faker.js</h2>
+    <section class="code-section-container">
+      <div class="code-text-section">
+          <p>Add an import statement at the top.</p>
+      </div>
+
+<div class="code-block-section-w60 ">
+<pre class="example"><span class="code-react">import React from "react";
+import ReactDOM from "react-dom";
+<span class="code-highlight">import faker from "faker"; </span>
+
+if (module.hot) {
+  module.hot.accept();
+}
+
+const App = () =&gt; {
+  return (
+    &lt;div className="ui container comments"&gt;
+      &lt;div className="comment"&gt;
+        &lt;a href="/" className="avatar"&gt;
+          <span class="code-comment">// call the faker API </span>
+          <span class="code-highlight">&lt;img alt="avatar" src={faker.image.image()} /&gt; </span>
+        &lt;/a&gt;
+        &lt;div className="content"&gt;
+          &lt;a href="/" className="author"&gt;
+            Sam
+          &lt;/a&gt;
+          &lt;div className="metadata"&gt;
+            &lt;span className="date"&gt;Today at 6:00PM&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="text"&gt;Nice blog post!&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;App /&gt;, document.querySelector("#root"));</span></pre>
+</div>
+  </section>
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
