@@ -91,6 +91,31 @@ body {
     }
 } */
 
+#homepage-header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    background: linear-gradient(to bottom right, transparent 10%, rgb(0, 0, 0) 50%, transparent 90%);
+}
+
+#logo-container {
+    width: 20%;
+}
+
+#logo-img {
+    /* height: auto; */
+    width: 100%;
+}
+
+#header-text {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-basis: 80%;
+    color: #61dafb;
+    font-size: 5rem;
+}
+
 .homepage-title-container {
     position: relative;
     margin-top: 2rem;
@@ -120,13 +145,13 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 2px solid #776a6a;
     font-size: 3rem;
-    background: linear-gradient(to bottom, #959595 0%, #ff8604 100%);
+    background: linear-gradient(to bottom, #b9b9b9 0%, #ff8400 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h2 {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* border-bottom: 2px solid #776a6a; */
     font-size: 2rem;
     background: linear-gradient(to bottom, #daf6ff 0%, #0074c9 100%);
@@ -137,7 +162,7 @@ h2 {
 h3 {
     margin-top: 1rem;
     font-size: 1.5rem;
-    background: linear-gradient(to bottom, #9ebe9a 0%, #01c633 100%);
+    background: linear-gradient(to bottom, #91ffe0 0%, #00811a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -145,7 +170,7 @@ h3 {
 h4 {
     margin-top: 2rem;
     font-size: 1.3rem;
-    background: linear-gradient(to bottom, #a4a4a4 0%, #ff0909 100%);
+    background: linear-gradient(to bottom, #a4a4a4 0%, #ff3f3f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -164,7 +189,7 @@ Links
 ___________________________________________________*/
 
 a:link {
-    color: #FFBF00;
+    color: #5cc2ff;
 }
 
 a:hover {
@@ -176,7 +201,7 @@ a:active {
 }
 
 a:visited {
-    color: #cf61fc;
+    color: #ab85ff;
 }
 
 
@@ -226,7 +251,7 @@ Lists
 ___________________________________________________*/
 
 ul {
-    /* margin: .5rem 0 1rem 2rem; */
+    margin: .5rem 0 1rem 2rem;
 }
 
 
@@ -234,7 +259,9 @@ ul {
 Code Section
 ___________________________________________________*/
 
+
 /* Used for text only sections. NO CODE. */
+
 .text-section {
     padding: 1rem;
     background-color: rgba(25, 25, 25, .5);
@@ -297,7 +324,8 @@ ___________________________________________________*/
 
 .code-highlight {
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #abedff;
 }
 
 .code-keyboard {
@@ -312,4 +340,16 @@ ___________________________________________________*/
     border: 1px solid #b2cdff;
     border-radius: 2px;
     padding: 1px 4px;
+}
+
+
+/*___________________________________________________
+Note Boxes
+___________________________________________________*/
+
+.notebox-warning {
+    border: 1px solid #910000;
+    padding: .5rem;
+    box-shadow: 1px 1px 21px 1px #b10000 inset;
+    color: #feb8b8;
 }
