@@ -2,83 +2,70 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> -->
 
-    <link rel="stylesheet" type="text/css" href="../../_css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/styles.css">
 
-    <title>Props</title>
+  <title>Props</title>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <a href="../../index.html">Back to homepage</a>
-        <a class="nav-page nav-active">Props</a>
-    </nav>
+  <nav class="navbar">
+    <a href="../../index.html">Back to homepage</a>
+    <a class="nav-page nav-active">Props</a>
+  </nav>
 
 
 
 
 
-
-    <h1>Props</h1>
-    <div class="code-text-section">
-        <p>Props stands for properties.</p>
-        <p>Props are arguments passed into React components.</p>
-        <p>Components can be passed as props.</p>
-        <p>Props are like function arguments, and you send them into the component as HTML attributes.</p>
-    </div>
+  <h1>Parent and Child Components</h1>
+  <div class="code-text-section">
+    <img src="../../_img/parent-child-components.png" width="450px">
+    <p>The App is the Parent Component.</p>
+    <p>The imported Components are Child Components.</p>
+  </div>
 
 
 
-    <h2>Components in Files</h2>
-    <section class="code-section-container">
-        <div class="code-text-section">
-            <p>It is recommended to split your components into separate files.</p>
-            <p>To do that, create a new file with a .js file extension and put the code inside it.</p>
-            <div class="notebox-note">
-                <p>The filename must start with an uppercase character.</p>
+  <h1>Props</h1>
+  <div class="code-text-section">
+    <img src="../../_img/parent-child-components.png" width="450px">
+    <p>Props stands for properties.</p>
+    <!-- <p>Props are arguments passed into React components.</p>
+    <p>Components can be passed as props.</p>
+    <p>Props are like function arguments, and you send them into the component as HTML attributes.</p>  -->
 
-            </div>
-            <p>This example creates a Component named Car.js.</p>
+  <img src="../../_img/props.png" width="450px">
 
-        </div>
+<p>The ultimate goal is to <strong>customize</strong> the child. To make the content different, or change the behavior when the user interacts with it.</p>
+<img src="../../_img/props-example.png" width="450px">
+<p>The App passes in configuration data into each component.</p>
+</div>
 
-        <div class="code-block-section-w60 ">
-            <pre class="example"><span class="code-react">function Car() {
-return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
-}
+<h2>Step 1: Provide info to the child</h2>
+  <div class="code-text-section">
+    <img src="../../_img/props-providing-info.png" width="450px">
+<p>The first part is the component name to be passed.</p>
+<p>Create a property name.</p>
+<p>Then the value. This could be referenced as a variable within curly braces.</p>
+  </div>
 
-export default Car;</span></pre>
-        </div>
-    </section>
-
-    <section class="code-section-container">
-        <div class="code-text-section">
-            <p>You can then import it into our application.</p>
-
-        </div>
-
-        <div class="code-block-section-w60 ">
-            <pre class="example"><span class="code-react">import Car from './Car.js';</span></pre>
-        </div>
-    </section>
+  <h2>Step 2: Child consumes the information</h2>
+  <div class="code-text-section">
+<p>After the values are passed, you must open the Component to consume the information.</p>
+<p>This Prop will show up inside an Object that is provided as the 1st argument to the function.</p>
+<p>For example, if you <span class="code">console.log(props)</span> just after the <span class="code">const App = () =&gt; {</span>, you'll see Objects from the Prop.</p>
+<p>This means you can consume it within your component like this: <span class="code">{props.author}</span></p>
 
 
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
