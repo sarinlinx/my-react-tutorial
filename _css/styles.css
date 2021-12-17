@@ -1,7 +1,7 @@
 /* CSS variables. Place these in :root pseudo element 
 You can then use them using the var() property as shown below */
 
- :root {
+ /* :root {
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
     --color-primary-dark: #BA265D;
@@ -15,7 +15,7 @@ You can then use them using the var() property as shown below */
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
     --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
     --line: 1px solid var(--color-grey-light-2)
-}
+} */
 
 
 /* General Sass media query sizes */
@@ -52,10 +52,11 @@ html {
     /* make it easier to use rems 
     1rem = 10px, 10px/16px = 62.5%*/
     /* font-size: 62.5%; */
+    font-size: 105%;
 }
 
 body {
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     font-family: 'Lora', serif;
     font-weight: 400;
     line-height: 2;
@@ -183,6 +184,10 @@ h5 {
     -webkit-text-fill-color: transparent;
 }
 
+p {
+  margin: .7rem .2rem;
+}
+
 
 /*___________________________________________________
 Links
@@ -193,7 +198,7 @@ a:link {
 }
 
 a:hover {
-    color: #f45b00;
+    color: #6cfa4f;
 }
 
 a:active {
@@ -201,7 +206,7 @@ a:active {
 }
 
 a:visited {
-    color: #ab85ff;
+    color: #ff9979;
 }
 
 
@@ -343,6 +348,10 @@ ___________________________________________________*/
     padding: 1px 4px;
 }
 
+.text-object {
+  color: #c49cff;;
+  font-size: 1.1rem;
+}
 
 /*___________________________________________________
 Note Boxes
@@ -351,7 +360,7 @@ ___________________________________________________*/
 .notebox-note {
     border: 1px solid #00236f;
     padding: .5rem;
-    margin: 1rem 0;
+    margin: 1rem .5rem 1rem 0;
     box-shadow: 1px 1px 21px 1px #698cff inset;
     color: #9edbff;
     display: inline-block;
@@ -360,7 +369,7 @@ ___________________________________________________*/
 .notebox-warning {
     border: 1px solid #910000;
     padding: .5rem;
-    margin: 1rem 0;
+    margin: 1rem .5rem 1rem 0;
     box-shadow: 1px 1px 21px 1px #b10000 inset;
     color: #feb8b8;
     display: inline-block;
